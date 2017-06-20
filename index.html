@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript" src='jquery.js'></script>
+        <script type="text/javascript" src='d3.min.js'></script>
+        <link rel="stylesheet" href='style.css'>
+    </head>
+    <body>
+        <div class='main'>
+            <h1>Bitcoin MACD Calculator</h1>
+            <h3>Background</h3>
+            <p>
+            The MACD is a tool used by professional quantitative analysts to gauge market trends.
+            It involves comparing the differential between a two-week and month-long moving average.
+            Whether or not the MACD can actually predict future movement is debated, but the fact that some
+            analysts use it often makes it a self-fulfilling prophecy. If enough investors base their decisions on
+            the oscillation of the MACD, their collective behavior can influence the underlying.
+            </p>
+            <h3>Tool</h3>
+            <label for="data_source">Data source: </label>
+            <select id="data_source">
+                <option value='loadCoinDesk()'>Coindesk Historical API</option>
+                <!--<option value='own()'>Upload your own data</option>-->
+            </select>
+            <button onclick="loadCoinDesk()" id="submit">Go</button>
+            <svg width="960" height="500"></svg>
+            <hr/>
+            Disclaimer: Blah blah blah.
+        </div>
+        <script type="text/javascript" src='code.js'></script>
+    </body>
+</html>
