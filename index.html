@@ -9,22 +9,31 @@
             <h1>Bitcoin MACD Calculator</h1>
             <h3>Background</h3>
             <p>
-            The MACD is a tool used by professional quantitative analysts to gauge market trends.
+            The MACD is a tool used by quantitative analysts to gauge market trends.
             It involves comparing the differential between a two-week and month-long moving average.
             Whether or not the MACD can actually predict future movement is debated, but the fact that some
             analysts use it often makes it a self-fulfilling prophecy. If enough investors base their decisions on
-            the oscillation of the MACD, their collective behavior can influence the underlying.
+            the oscillation of the MACD, their collective behavior can influence the underlying. For chart interpretation,
+            please see this great explanation at <a href="http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:moving_average_convergence_divergence_macd" target="_blank">StockCharts</a>.
             </p>
             <h3>Tool</h3>
-            <label for="data_source">Data source: </label>
-            <select id="data_source">
-                <option value='loadCoinDesk()'>Coindesk Historical API</option>
-                <!--<option value='own()'>Upload your own data</option>-->
-            </select>
-            <button onclick="loadCoinDesk()" id="submit">Go</button>
-            <svg width="960" height="500"></svg>
-            <hr/>
-            Disclaimer: Blah blah blah.
+            <div id="selector" style="display:none;">
+                <label for="length_settings">Day settings: </label>
+                <select id="length_settings">
+                    <option value='12,26,9'>Traditional (12, 26, and 9)</option>
+                    <option value='5,35,5'>Sensitive (5, 35, and 5)</option>
+                    <option value='14,30,10'>Coin optimized (14, 30, and 10)</option>
+                </select>
+            </div>
+            <div id="loading">
+                <img src="Loading_icon.gif"/>
+            </div>
+            <svg viewBox="0 0 850 450"></svg>
+            <hr style="width:100%"/>
+            <h3>Disclaimer</h3>
+            <p>Powered by <a href="http://www.coindesk.com/price/" target="_blank">CoinDesk.</a> All data provided kindly from their free <a href="http://www.coindesk.com/api/" target="_blank">API</a>.</p>
+            <p>All information and charts above are provided for educational purposes only.</p>
+            <p>The source-code for the chart above is available on my Github <a href="https://github.com/akmiller01/coinmacd" target="_blank">here</a>. If you enjoyed my MACD calculator, please consider donating a small amount of money to my Bitcoin wallet here.</p>
         </div>
         <script type="text/javascript" src='code.js'></script>
     </body>

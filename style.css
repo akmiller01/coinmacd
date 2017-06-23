@@ -1,5 +1,7 @@
 .main{
-    width:66%;
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
 }
 
 .axis--x path {
@@ -10,4 +12,12 @@
   fill: none;
   stroke: steelblue;
   stroke-width: 1.5px;
+}
+
+button {
+    cursor:pointer;
+}
+
+button.inactive{
+    cursor:default;
 }
