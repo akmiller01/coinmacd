@@ -172,22 +172,15 @@ function updateChart(dataObj){
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", -15)
-      .attr("x",-100)
+      .attr("x",-90)
       .attr("dy", "0.71em")
       .attr("fill", "#000")
-      .text("Price");
+      .text("USD");
       
     gMacd.append("g")
       .attr("class", "axis axis--y")
       .attr("transform", "translate( " + widthMacd + ", 0 )")
-      .call(d3.axisRight(y2))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", -15)
-      .attr("x", -130)
-      .attr("dy", "0.71em")
-      .attr("fill", "#000")
-      .text("Moving Average Differential");
+      .call(d3.axisRight(y2));
 
   var macdAndTrigger = gMacd.selectAll(".macdAndTrigger")
     .data(data.slice(1))

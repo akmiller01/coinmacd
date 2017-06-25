@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:latest
+    expose:
+      - "80"
+    volumes:
+      - ./:/www/data
+      - ./config/nginx:/etc/nginx/conf.d
+    environment:
+      - VIRTUAL_HOST=bitcoin.pogona.org
